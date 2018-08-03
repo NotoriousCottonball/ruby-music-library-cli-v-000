@@ -89,7 +89,7 @@ class MusicLibraryController
   end
    def update_song_list
       Song.all.each do |s|
-        @@song_list.include?(s) || (@@song_list << s && @song_list << s
+        @@song_list.include?(s) || (@@song_list << s && @song_list << s)
       end
     end
 end
