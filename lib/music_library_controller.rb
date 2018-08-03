@@ -52,7 +52,7 @@ class MusicLibraryController
       end
     end
    def list_genres
-    genre_list = Genre.all.sort_by!&:name}
+    genre_list = Genre.all.sort_by(& :name)
     counter = 1
     genre_list.each do |g|
       puts "#{counter}. #{g.name}"
