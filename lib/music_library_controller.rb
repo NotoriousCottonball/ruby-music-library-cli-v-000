@@ -4,7 +4,7 @@ class MusicLibraryController
    def initialize(path = "./db/mp3s")
     MusicImporter.new(path).tap{|i| i.import}
     @song_list = []
-  end
+   end
    def call
     input = nil
     until input == "exit"
