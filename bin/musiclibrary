@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+icl#!/usr/bin/env ruby
 
 require_relative '../config/environment'
 
