@@ -2,7 +2,7 @@ class MusicLibraryController
   attr_accessor :path, :songs
    @@song_list = []
    def initialize(path = "./db/mp3s")
-    MusicImporter.new(path).
+    MusicImporter.new(path).tap{|i| i.
     importer.import
     @song_list = []
   end
