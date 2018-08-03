@@ -73,8 +73,8 @@ class MusicLibraryController
     genre = gets.chomp
     songs = Song.all.select { |song| song.genre.name == genre}
     sorted = songs.sort_by { |song| song.name }
-    sorted.each.with_index(1) do |song, f|
-      puts "#{f}. #{song.artist.name} - #{song.name}"
+    sorted.each.with_index(1) do |song, i|
+      puts "#{i}. #{song.artist.name} - #{song.name}"
     end
   end
    def play_song
