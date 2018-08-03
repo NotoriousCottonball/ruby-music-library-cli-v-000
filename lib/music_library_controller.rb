@@ -63,7 +63,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     artist = gets.chomp
      songs = Song.all.select { |song| song.artist.name == artist}
-    sorted = songs.sort_by (&:name)
+    sorted = songs.sort_by (& :name)
      sorted.each.with_index(1) do |song, i|
       puts "#{i}. #{song.name} - #{song.genre.name}"
     end
